@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # Carregar o CSV
-file_path = 'results.csv'  # Substitua pelo caminho correto do seu arquivo CSV
+file_path = 'results.csv' 
 data = pd.read_csv(file_path, delimiter=';')
 
 # Título da aplicação
@@ -34,7 +34,7 @@ elif chart_type == 'Gráfico de Dispersão':
     plt.figure(figsize=(8, 6))
     sns.scatterplot(data=data, x=x_axis, y=y_axis, hue='dataset')
     plt.title(f'{x_axis} vs {y_axis}')
-    plt.xticks(rotation=90)  # Rotacionar os rótulos do eixo X para 90 graus
+    plt.xticks(rotation=90) 
     st.pyplot(plt)
     
 elif chart_type == 'Boxplot':
@@ -42,7 +42,7 @@ elif chart_type == 'Boxplot':
     plt.figure(figsize=(10, 6))
     sns.boxplot(data=data, x=x_axis, y=y_axis)
     plt.title(f'{y_axis} by {x_axis}')
-    plt.xticks(rotation=90)  # Rotacionar os rótulos do eixo X para 90 graus
+    plt.xticks(rotation=90)  
     st.pyplot(plt)
 
 elif chart_type == 'Gráfico de Linhas':
@@ -50,7 +50,7 @@ elif chart_type == 'Gráfico de Linhas':
     plt.figure(figsize=(10, 6))
     sns.lineplot(data=data, x=x_axis, y=y_axis)
     plt.title(f'{y_axis} over {x_axis}')
-    plt.xticks(rotation=90)  # Rotacionar os rótulos do eixo X para 90 graus
+    plt.xticks(rotation=90)  
     st.pyplot(plt)
 
 elif chart_type == 'Histograma':
@@ -58,5 +58,5 @@ elif chart_type == 'Histograma':
     plt.figure(figsize=(10, 6))
     sns.histplot(data=data, x=x_axis, kde=True)
     plt.title(f'Distribuição de {x_axis}')
-    plt.xticks(rotation=90)  # Rotacionar os rótulos do eixo X para 90 graus
+    plt.xticks(rotation=90)  
     st.pyplot(plt)
